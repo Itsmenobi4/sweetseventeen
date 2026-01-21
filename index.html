@@ -1,0 +1,1685 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sweet Seventeen Panda Manis 🎂</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&family=Pacifico&display=swap" rel="stylesheet">
+  <style>
+    @keyframes fall {
+      0% {
+        transform: translateY(-10px) rotate(0deg);
+        opacity: 0.8;
+      }
+      100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+    
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0) rotate(0deg);
+      }
+      50% {
+        transform: translateY(-20px) rotate(5deg);
+      }
+    }
+    
+    @keyframes glow {
+      0%, 100% {
+        box-shadow: 0 0 15px rgba(14, 165, 233, 0.3);
+      }
+      50% {
+        box-shadow: 0 0 30px rgba(14, 165, 233, 0.6);
+      }
+    }
+    
+    @keyframes heartbeat {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.05);
+      }
+    }
+    
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-15px);
+      }
+    }
+    
+    @keyframes panda-eat {
+      0%, 100% {
+        transform: rotate(0deg);
+      }
+      25% {
+        transform: rotate(15deg);
+      }
+      75% {
+        transform: rotate(-15deg);
+      }
+    }
+    
+    @keyframes rainbow {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    
+    @keyframes sparkle {
+      0%, 100% { opacity: 0; }
+      50% { opacity: 1; }
+    }
+    
+    @keyframes balloon-float {
+      0%, 100% { transform: translateY(0) rotate(-5deg); }
+      50% { transform: translateY(-30px) rotate(5deg); }
+    }
+    
+    .dancing-font {
+      font-family: 'Dancing Script', cursive;
+    }
+    
+    .poppins-font {
+      font-family: 'Poppins', sans-serif;
+    }
+    
+    .comic-font {
+      font-family: 'Comic Neue', cursive;
+    }
+    
+    .pacifico-font {
+      font-family: 'Pacifico', cursive;
+    }
+    
+    .gradient-bg {
+      background: linear-gradient(135deg, #e0f2fe 0%, #f0f9ff 25%, #e0f2fe 50%, #f0f9ff 75%, #e0f2fe 100%);
+      background-size: 400% 400%;
+      animation: rainbow 20s ease infinite;
+    }
+    
+    .hero-image {
+      filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.1));
+      animation: float 5s ease-in-out infinite, glow 3s ease-in-out infinite;
+    }
+    
+    .heartbeat {
+      animation: heartbeat 1.5s ease-in-out infinite;
+    }
+    
+    .bounce-animation {
+      animation: bounce 2s ease-in-out infinite;
+    }
+    
+    .glass-effect {
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      box-shadow: 0 8px 32px rgba(31, 38, 135, 0.1);
+    }
+    
+    .panda-theme-bg {
+      background: rgba(255, 255, 255, 0.95);
+      border: 2px solid #333;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+    
+    .floating-element {
+      animation: float 6s ease-in-out infinite;
+      animation-delay: calc(var(--i) * 0.5s);
+    }
+    
+    .sparkle {
+      position: absolute;
+      width: 4px;
+      height: 4px;
+      background: white;
+      border-radius: 50%;
+      box-shadow: 0 0 10px white, 0 0 20px white;
+      animation: sparkle 1.5s infinite;
+    }
+    
+    .scroll-down {
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 30px;
+      height: 50px;
+      border: 2px solid #0ea5e9;
+      border-radius: 15px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    
+    .scroll-down:hover {
+      border-color: #f59e0b;
+      transform: translateX(-50%) scale(1.1);
+    }
+    
+    .scroll-down::before {
+      content: '';
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 6px;
+      height: 6px;
+      background: #0ea5e9;
+      border-radius: 50%;
+      animation: scroll 2s infinite;
+    }
+    
+    @keyframes scroll {
+      0% {
+        opacity: 1;
+        top: 10px;
+      }
+      100% {
+        opacity: 0;
+        top: 30px;
+      }
+    }
+    
+    .cake {
+      position: relative;
+      width: 180px;
+      height: 100px;
+      margin: 0 auto;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    
+    .cake:hover {
+      transform: scale(1.1);
+    }
+    
+    .cake-layer {
+      position: absolute;
+      width: 100%;
+      border-radius: 15px 15px 0 0;
+      transition: all 0.3s ease;
+    }
+    
+    .layer-1 {
+      height: 40px;
+      background: linear-gradient(to bottom, #0ea5e9, #38bdf8);
+      bottom: 0;
+      z-index: 1;
+    }
+    
+    .layer-2 {
+      height: 35px;
+      background: linear-gradient(to bottom, #38bdf8, #7dd3fc);
+      bottom: 40px;
+      width: 85%;
+      left: 7.5%;
+      z-index: 2;
+    }
+    
+    .layer-3 {
+      height: 30px;
+      background: linear-gradient(to bottom, #7dd3fc, #bae6fd);
+      bottom: 75px;
+      width: 70%;
+      left: 15%;
+      z-index: 3;
+    }
+    
+    .cake:hover .layer-1 {
+      height: 42px;
+    }
+    
+    .cake:hover .layer-2 {
+      height: 37px;
+    }
+    
+    .cake:hover .layer-3 {
+      height: 32px;
+    }
+    
+    .candle {
+      position: absolute;
+      width: 8px;
+      height: 30px;
+      background: linear-gradient(to bottom, #fbbf24, #f59e0b);
+      border-radius: 4px;
+      bottom: 105px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 4;
+    }
+    
+    .flame {
+      position: absolute;
+      width: 15px;
+      height: 25px;
+      background: linear-gradient(to bottom, #fde047, #f59e0b);
+      border-radius: 50% 50% 20% 20%;
+      bottom: 130px;
+      left: 50%;
+      transform: translateX(-50%);
+      animation: flame-flicker 0.3s infinite alternate;
+      z-index: 5;
+      filter: blur(1px);
+    }
+    
+    @keyframes flame-flicker {
+      0% {
+        height: 20px;
+        background: linear-gradient(to bottom, #fde047, #f59e0b);
+        width: 12px;
+      }
+      100% {
+        height: 28px;
+        background: linear-gradient(to bottom, #fef3c7, #fbbf24);
+        width: 18px;
+      }
+    }
+    
+    /* Enhanced Panda Container - PERBAIKAN RESPONSIF */
+    .panda-container {
+      position: relative;
+      width: 180px;
+      height: 180px;
+      margin: 0 auto;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    
+    .panda-container:hover {
+      transform: scale(1.05) rotate(5deg);
+    }
+    
+    .panda-face {
+      width: 150px;
+      height: 150px;
+      background: white;
+      border-radius: 50%;
+      position: absolute;
+      border: 4px solid #333;
+      top: 5px;
+      left: 15px;
+      z-index: 2;
+      box-shadow: inset 0 0 10px rgba(0,0,0,0.1);
+    }
+    
+    .panda-ear {
+      width: 60px;
+      height: 60px;
+      background: #333;
+      border-radius: 50%;
+      position: absolute;
+      top: 0;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    }
+    
+    .panda-ear-left {
+      left: 0;
+    }
+    
+    .panda-ear-right {
+      right: 0;
+    }
+    
+    .panda-eye {
+      width: 40px;
+      height: 50px;
+      background: #333;
+      border-radius: 50%;
+      position: absolute;
+      top: 50px;
+      box-shadow: inset 0 0 10px rgba(255,255,255,0.3);
+    }
+    
+    .panda-eye-left {
+      left: 30px;
+    }
+    
+    .panda-eye-right {
+      right: 30px;
+    }
+    
+    .panda-eye-inner {
+      width: 15px;
+      height: 20px;
+      background: white;
+      border-radius: 50%;
+      position: absolute;
+      top: 15px;
+      left: 12px;
+    }
+    
+    .panda-eye-sparkle {
+      width: 6px;
+      height: 6px;
+      background: white;
+      border-radius: 50%;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      animation: sparkle 2s infinite;
+    }
+    
+    .panda-nose {
+      width: 25px;
+      height: 15px;
+      background: #333;
+      border-radius: 50%;
+      position: absolute;
+      top: 90px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    
+    .panda-mouth {
+      width: 30px;
+      height: 15px;
+      border-bottom: 4px solid #333;
+      border-radius: 0 0 30px 30px;
+      position: absolute;
+      top: 105px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    
+    .bamboo {
+      position: absolute;
+      width: 10px;
+      height: 80px;
+      background: linear-gradient(to bottom, #22c55e, #16a34a);
+      border-radius: 5px;
+      bottom: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    }
+    
+    .bamboo::before {
+      content: '';
+      position: absolute;
+      width: 8px;
+      height: 15px;
+      background: #16a34a;
+      border-radius: 4px;
+      top: -15px;
+      left: 1px;
+    }
+    
+    .panda-hand {
+      width: 40px;
+      height: 20px;
+      background: #333;
+      border-radius: 50%;
+      position: absolute;
+      bottom: 50px;
+      animation: panda-eat 2s infinite;
+      z-index: 3;
+      box-shadow: 0 3px 5px rgba(0,0,0,0.2);
+    }
+    
+    .panda-hand-left {
+      left: 20px;
+      transform-origin: right center;
+    }
+    
+    .panda-hand-right {
+      right: 20px;
+      transform-origin: left center;
+      animation-delay: 1s;
+    }
+    
+    .bamboo-leaf {
+      position: absolute;
+      width: 25px;
+      height: 15px;
+      background: #22c55e;
+      border-radius: 50% 0 50% 0;
+      bottom: 30px;
+      z-index: 0;
+    }
+    
+    .bamboo-leaf-left {
+      left: 40px;
+      transform: rotate(-45deg);
+    }
+    
+    .bamboo-leaf-right {
+      right: 40px;
+      transform: rotate(45deg);
+    }
+    
+    .panda-message {
+      position: absolute;
+      bottom: -80px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: white;
+      padding: 10px 15px;
+      border-radius: 15px;
+      border: 2px solid #333;
+      font-weight: bold;
+      white-space: nowrap;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+      z-index: 10;
+      font-family: 'Comic Neue', cursive;
+      animation: heartbeat 1.5s infinite;
+      font-size: 14px;
+      display: none; /* Sembunyikan dulu */
+    }
+    
+    .panda-message::before {
+      content: '';
+      position: absolute;
+      top: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 0;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-bottom: 10px solid #333;
+    }
+    
+    .panda-message::after {
+      content: '';
+      position: absolute;
+      top: -7px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 0;
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+      border-bottom: 8px solid white;
+    }
+    
+    /* Balloons */
+    .balloon {
+      position: absolute;
+      width: 60px;
+      height: 70px;
+      border-radius: 50%;
+      animation: balloon-float 5s ease-in-out infinite;
+      z-index: 0;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    
+    .balloon:hover {
+      transform: scale(1.2);
+    }
+    
+    .balloon::after {
+      content: '';
+      position: absolute;
+      bottom: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 2px;
+      height: 30px;
+      background: #888;
+    }
+    
+    .balloon-1 {
+      background: radial-gradient(circle at 30% 30%, #f472b6, #ec4899);
+      top: 10%;
+      left: 5%;
+      animation-delay: 0s;
+    }
+    
+    .balloon-2 {
+      background: radial-gradient(circle at 30% 30%, #60a5fa, #3b82f6);
+      top: 15%;
+      right: 8%;
+      animation-delay: 1s;
+    }
+    
+    .balloon-3 {
+      background: radial-gradient(circle at 30% 30%, #34d399, #10b981);
+      top: 70%;
+      left: 7%;
+      animation-delay: 2s;
+    }
+    
+    .balloon-4 {
+      background: radial-gradient(circle at 30% 30%, #fbbf24, #f59e0b);
+      top: 65%;
+      right: 10%;
+      animation-delay: 3s;
+    }
+    
+    /* Confetti */
+    .confetti {
+      position: fixed;
+      width: 15px;
+      height: 15px;
+      opacity: 0;
+      z-index: 9999;
+      pointer-events: none;
+    }
+    
+    /* Interactive Card */
+    .interactive-card {
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+    
+    .interactive-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
+    }
+    
+    /* Celebration Modal */
+    .celebration-modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10000;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.5s ease;
+    }
+    
+    .celebration-modal.active {
+      opacity: 1;
+      visibility: visible;
+    }
+    
+    .modal-content {
+      background: white;
+      padding: 30px;
+      border-radius: 25px;
+      max-width: 500px;
+      text-align: center;
+      transform: scale(0.8);
+      transition: transform 0.5s ease;
+    }
+    
+    .celebration-modal.active .modal-content {
+      transform: scale(1);
+    }
+    
+    /* Photo Frame */
+    .photo-frame {
+      border: 15px solid #fbbf24;
+      border-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%23fbbf24"/><circle cx="50" cy="50" r="45" fill="%23fef3c7"/></svg>') 30 stretch;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+      transition: transform 0.5s ease;
+    }
+    
+    .photo-frame:hover {
+      transform: rotate(5deg) scale(1.05);
+    }
+    
+    /* RESPONSIVE BREAKPOINTS UNTUK PANDA YANG LEBIH BAIK */
+    
+    /* Tablet (768px ke bawah) */
+    @media (max-width: 768px) {
+      .balloon {
+        width: 40px;
+        height: 50px;
+      }
+      
+      .panda-container {
+        width: 160px;
+        height: 160px;
+      }
+      
+      .panda-face {
+        width: 130px;
+        height: 130px;
+        top: 5px;
+        left: 15px;
+      }
+      
+      .panda-ear {
+        width: 55px;
+        height: 55px;
+      }
+      
+      .panda-eye {
+        width: 35px;
+        height: 45px;
+        top: 45px;
+      }
+      
+      .panda-eye-left {
+        left: 25px;
+      }
+      
+      .panda-eye-right {
+        right: 25px;
+      }
+      
+      .panda-eye-inner {
+        width: 13px;
+        height: 18px;
+        top: 13px;
+        left: 11px;
+      }
+      
+      .panda-nose {
+        width: 22px;
+        height: 13px;
+        top: 80px;
+      }
+      
+      .panda-mouth {
+        width: 26px;
+        height: 13px;
+        top: 95px;
+      }
+      
+      .panda-hand {
+        width: 35px;
+        height: 18px;
+        bottom: 45px;
+      }
+      
+      .panda-hand-left {
+        left: 18px;
+      }
+      
+      .panda-hand-right {
+        right: 18px;
+      }
+      
+      .bamboo {
+        width: 9px;
+        height: 70px;
+        bottom: -15px;
+      }
+      
+      .bamboo::before {
+        width: 7px;
+        height: 13px;
+        top: -13px;
+      }
+      
+      .bamboo-leaf {
+        width: 22px;
+        height: 13px;
+        bottom: 25px;
+      }
+      
+      .bamboo-leaf-left {
+        left: 35px;
+      }
+      
+      .bamboo-leaf-right {
+        right: 35px;
+      }
+      
+      .cake {
+        width: 150px;
+        height: 85px;
+      }
+      
+      .cake-layer {
+        border-radius: 10px 10px 0 0;
+      }
+      
+      .layer-1 {
+        height: 30px;
+      }
+      
+      .layer-2 {
+        height: 27px;
+        bottom: 30px;
+      }
+      
+      .layer-3 {
+        height: 23px;
+        bottom: 57px;
+      }
+      
+      .candle {
+        bottom: 80px;
+        height: 25px;
+      }
+      
+      .flame {
+        bottom: 100px;
+        height: 20px;
+        width: 12px;
+      }
+    }
+    
+    /* Mobile kecil (640px ke bawah) */
+    @media (max-width: 640px) {
+      .panda-container {
+        width: 140px;
+        height: 140px;
+      }
+      
+      .panda-face {
+        width: 110px;
+        height: 110px;
+        top: 5px;
+        left: 15px;
+      }
+      
+      .panda-ear {
+        width: 45px;
+        height: 45px;
+      }
+      
+      .panda-eye {
+        width: 30px;
+        height: 38px;
+        top: 38px;
+      }
+      
+      .panda-eye-left {
+        left: 20px;
+      }
+      
+      .panda-eye-right {
+        right: 20px;
+      }
+      
+      .panda-eye-inner {
+        width: 11px;
+        height: 15px;
+        top: 11px;
+        left: 9px;
+      }
+      
+      .panda-nose {
+        width: 18px;
+        height: 11px;
+        top: 70px;
+      }
+      
+      .panda-mouth {
+        width: 22px;
+        height: 11px;
+        top: 82px;
+      }
+      
+      .panda-hand {
+        width: 30px;
+        height: 15px;
+        bottom: 40px;
+      }
+      
+      .panda-hand-left {
+        left: 15px;
+      }
+      
+      .panda-hand-right {
+        right: 15px;
+      }
+      
+      .bamboo {
+        width: 7px;
+        height: 60px;
+        bottom: -12px;
+      }
+      
+      .bamboo::before {
+        width: 6px;
+        height: 11px;
+        top: -11px;
+      }
+      
+      .bamboo-leaf {
+        width: 18px;
+        height: 11px;
+        bottom: 20px;
+      }
+      
+      .bamboo-leaf-left {
+        left: 30px;
+      }
+      
+      .bamboo-leaf-right {
+        right: 30px;
+      }
+      
+      .cake {
+        width: 130px;
+        height: 75px;
+      }
+      
+      .layer-1 {
+        height: 25px;
+      }
+      
+      .layer-2 {
+        height: 22px;
+        bottom: 25px;
+      }
+      
+      .layer-3 {
+        height: 20px;
+        bottom: 47px;
+      }
+      
+      .candle {
+        bottom: 70px;
+        height: 20px;
+      }
+      
+      .flame {
+        bottom: 85px;
+        height: 18px;
+        width: 10px;
+      }
+    }
+    
+    /* Mobile sangat kecil (480px ke bawah) */
+    @media (max-width: 480px) {
+      .panda-container {
+        width: 120px;
+        height: 120px;
+      }
+      
+      .panda-face {
+        width: 95px;
+        height: 95px;
+        top: 5px;
+        left: 12px;
+      }
+      
+      .panda-ear {
+        width: 40px;
+        height: 40px;
+      }
+      
+      .panda-eye {
+        width: 25px;
+        height: 32px;
+        top: 32px;
+      }
+      
+      .panda-eye-left {
+        left: 18px;
+      }
+      
+      .panda-eye-right {
+        right: 18px;
+      }
+      
+      .panda-eye-inner {
+        width: 9px;
+        height: 13px;
+        top: 9px;
+        left: 8px;
+      }
+      
+      .panda-nose {
+        width: 15px;
+        height: 9px;
+        top: 60px;
+      }
+      
+      .panda-mouth {
+        width: 18px;
+        height: 9px;
+        top: 70px;
+      }
+      
+      .panda-hand {
+        width: 25px;
+        height: 12px;
+        bottom: 35px;
+      }
+      
+      .panda-hand-left {
+        left: 13px;
+      }
+      
+      .panda-hand-right {
+        right: 13px;
+      }
+      
+      .bamboo {
+        width: 6px;
+        height: 50px;
+        bottom: -10px;
+      }
+      
+      .bamboo::before {
+        width: 5px;
+        height: 9px;
+        top: -9px;
+      }
+      
+      .bamboo-leaf {
+        width: 15px;
+        height: 9px;
+        bottom: 17px;
+      }
+      
+      .bamboo-leaf-left {
+        left: 25px;
+      }
+      
+      .bamboo-leaf-right {
+        right: 25px;
+      }
+      
+      .photo-frame {
+        max-width: 90%;
+        margin: 0 auto;
+      }
+      
+      .cake {
+        width: 110px;
+        height: 65px;
+      }
+      
+      .layer-1 {
+        height: 22px;
+      }
+      
+      .layer-2 {
+        height: 19px;
+        bottom: 22px;
+      }
+      
+      .layer-3 {
+        height: 17px;
+        bottom: 41px;
+      }
+      
+      .candle {
+        bottom: 58px;
+        height: 18px;
+        width: 6px;
+      }
+      
+      .flame {
+        bottom: 70px;
+        height: 15px;
+        width: 9px;
+      }
+      
+      .scroll-down {
+        bottom: 15px;
+        width: 25px;
+        height: 40px;
+      }
+      
+      .scroll-down::before {
+        top: 8px;
+        width: 5px;
+        height: 5px;
+      }
+    }
+    
+    /* Mobile ekstra kecil (380px ke bawah) */
+    @media (max-width: 380px) {
+      .panda-container {
+        width: 100px;
+        height: 100px;
+      }
+      
+      .panda-face {
+        width: 80px;
+        height: 80px;
+        top: 5px;
+        left: 10px;
+      }
+      
+      .panda-ear {
+        width: 35px;
+        height: 35px;
+      }
+      
+      .panda-eye {
+        width: 22px;
+        height: 28px;
+        top: 25px;
+      }
+      
+      .panda-eye-left {
+        left: 15px;
+      }
+      
+      .panda-eye-right {
+        right: 15px;
+      }
+      
+      .panda-eye-inner {
+        width: 8px;
+        height: 11px;
+        top: 8px;
+        left: 7px;
+      }
+      
+      .panda-nose {
+        width: 13px;
+        height: 8px;
+        top: 50px;
+      }
+      
+      .panda-mouth {
+        width: 16px;
+        height: 8px;
+        top: 58px;
+      }
+      
+      .panda-hand {
+        width: 20px;
+        height: 10px;
+        bottom: 30px;
+      }
+      
+      .panda-hand-left {
+        left: 10px;
+      }
+      
+      .panda-hand-right {
+        right: 10px;
+      }
+      
+      .bamboo {
+        width: 5px;
+        height: 40px;
+        bottom: -8px;
+      }
+      
+      .bamboo::before {
+        width: 4px;
+        height: 8px;
+        top: -8px;
+      }
+      
+      .bamboo-leaf {
+        width: 13px;
+        height: 8px;
+        bottom: 15px;
+      }
+      
+      .bamboo-leaf-left {
+        left: 20px;
+      }
+      
+      .bamboo-leaf-right {
+        right: 20px;
+      }
+      
+      .cake {
+        width: 90px;
+        height: 55px;
+      }
+      
+      .layer-1 {
+        height: 18px;
+      }
+      
+      .layer-2 {
+        height: 16px;
+        bottom: 18px;
+        width: 80%;
+        left: 10%;
+      }
+      
+      .layer-3 {
+        height: 14px;
+        bottom: 34px;
+        width: 65%;
+        left: 17.5%;
+      }
+      
+      .candle {
+        bottom: 48px;
+        height: 15px;
+        width: 5px;
+      }
+      
+      .flame {
+        bottom: 58px;
+        height: 12px;
+        width: 7px;
+      }
+    }
+    
+    /* Floating elements hanya untuk desktop */
+    @media (max-width: 1024px) {
+      .floating-element {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body class="gradient-bg text-gray-800 relative overflow-x-hidden poppins-font">
+  <!-- Background Elements -->
+  <div id="sparkles"></div>
+  <div id="hearts"></div>
+  <div id="confetti-container"></div>
+  
+  <!-- Balloons hanya untuk desktop -->
+  <div class="balloon balloon-1 hidden md:block">🎈</div>
+  <div class="balloon balloon-2 hidden md:block">🎈</div>
+  <div class="balloon balloon-3 hidden md:block">🎈</div>
+  <div class="balloon balloon-4 hidden md:block">🎈</div>
+  
+  <!-- Celebration Modal -->
+  <div class="celebration-modal" id="celebrationModal">
+    <div class="modal-content glass-effect panda-theme-bg mx-4">
+      <h3 class="text-2xl md:text-3xl font-bold text-sky-900 dancing-font mb-4">🎉 Surprise! 🎉</h3>
+      <p class="text-lg md:text-xl mb-6 px-2">Happy Sweet Seventeen! Semoga hari ulang tahunmu penuh dengan kebahagiaan dan keceriaan seperti panda yang selalu menggemaskan!</p>
+      <button class="px-6 py-3 bg-gradient-to-r from-sky-600 to-emerald-600 text-black font-bold rounded-full hover:opacity-90 transition-all duration-300 text-sm md:text-base" onclick="closeModal()">
+        Tutup & Lanjutkan Perayaan!
+      </button>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="glass-effect p-3 md:p-4 shadow-lg mx-3 md:mx-4 mt-3 md:mt-4 rounded-xl sticky top-2 md:top-4 z-50 panda-theme-bg animate__animated animate__fadeInDown">
+    <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+      <h1 class="text-xl md:text-2xl lg:text-3xl font-bold text-sky-900 dancing-font flex items-center mb-3 md:mb-0 text-center md:text-left">
+        <i class="fas fa-birthday-cake mr-2 md:mr-3 text-sky-600 animate-spin" style="animation-duration: 3s;"></i>
+        <span class="whitespace-nowrap">Sweet Seventeen <span class="hidden sm:inline">Panda Manis</span> 🎋</span>
+      </h1>
+      <div class="grid grid-cols-2 sm:flex sm:flex-wrap justify-center gap-2 sm:gap-3 md:gap-4 lg:gap-6 w-full sm:w-auto">
+        <a href="index.html" class="px-3 sm:px-4 py-2 bg-gradient-to-r from-sky-600 to-emerald-600 text-blackrounded-full hover:opacity-90 transition-all duration-300 flex items-center shadow-lg interactive-card justify-center text-sm sm:text-base">
+          <i class="fas fa-home mr-1 sm:mr-2 text-xs sm:text-sm"></i> <span class="truncate">Home</span>
+        </a>
+        <a href="gallery.html" class="px-3 sm:px-4 py-2 bg-gradient-to-r from-white to-sky-100 text-sky-700 rounded-full hover:opacity-90 transition-all duration-300 flex items-center shadow-lg border border-sky-300 interactive-card justify-center text-sm sm:text-base">
+          <i class="fas fa-images mr-1 sm:mr-2 text-xs sm:text-sm"></i> <span class="truncate">Gallery</span>
+        </a>
+        <a href="quotes.html" class="px-3 sm:px-4 py-2 bg-gradient-to-r from-white to-emerald-100 text-emerald-700 rounded-full hover:opacity-90 transition-all duration-300 flex items-center shadow-lg border border-emerald-300 interactive-card justify-center text-sm sm:text-base">
+          <i class="fas fa-quote-right mr-1 sm:mr-2 text-xs sm:text-sm"></i> <span class="truncate">Quotes</span>
+        </a>
+        <a href="contact.html" class="px-3 sm:px-4 py-2 bg-gradient-to-r from-white to-rose-100 text-rose-700 rounded-full hover:opacity-90 transition-all duration-300 flex items-center shadow-lg border border-rose-300 interactive-card justify-center text-sm sm:text-base">
+          <i class="fas fa-envelope mr-1 sm:mr-2 text-xs sm:text-sm"></i> <span class="truncate">Contact</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <section class="flex flex-col items-center justify-center min-h-screen px-3 sm:px-4 py-8 sm:py-10 relative">
+    <div class="text-center flex flex-col items-center max-w-6xl w-full">
+      <!-- Animated Panda -->
+      <div class="panda-container mb-6 sm:mb-8 bounce-animation" id="panda">
+        <div class="panda-ear panda-ear-left"></div>
+        <div class="panda-ear panda-ear-right"></div>
+        <div class="panda-face">
+          <div class="panda-eye panda-eye-left">
+            <div class="panda-eye-inner"></div>
+            <div class="panda-eye-sparkle"></div>
+          </div>
+          <div class="panda-eye panda-eye-right">
+            <div class="panda-eye-inner"></div>
+            <div class="panda-eye-sparkle"></div>
+          </div>
+          <div class="panda-nose"></div>
+          <div class="panda-mouth"></div>
+        </div>
+        <div class="panda-hand panda-hand-left"></div>
+        <div class="panda-hand panda-hand-right"></div>
+        <div class="bamboo"></div>
+        <div class="bamboo-leaf bamboo-leaf-left"></div>
+        <div class="bamboo-leaf bamboo-leaf-right"></div>
+        <div class="panda-message" id="pandaMessage">Sweet Seventeen! 🎋</div>
+      </div>
+      
+      <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-sky-900 mb-4 sm:mb-6 animate__animated animate__fadeInDown dancing-font px-2">
+        Happy <span class="text-blackbg-gradient-to-r from-sky-500 via-purple-500 to-emerald-500 px-3 sm:px-4 md:px-6 py-2 sm:py-3 rounded-2xl sm:rounded-3xl ml-1 sm:ml-2 animate-pulse heartbeat inline-block text-2xl sm:text-3xl md:text-4xl lg:text-5xl">Sweet Seventeen</span> 🎉
+      </h2>
+      
+      <div class="glass-effect p-4 sm:p-6 md:p-8 rounded-2xl sm:rounded-3xl shadow-xl sm:shadow-2xl mb-8 sm:mb-10 animate__animated animate__fadeInUp animate__delay-1s w-full max-w-3xl panda-theme-bg interactive-card mx-2">
+        <p class="text-lg sm:text-xl md:text-2xl mb-4 sm:mb-6 leading-relaxed comic-font px-2">
+          <i class="fas fa-quote-left text-sky-500 mr-2"></i>
+          Di hari spesial ini, aku cuma mau bilang... kamu itu luar biasa seperti panda yang selalu menggemaskan. Tetap jadi Panda yang manis, kuat, dan penuh kehangatan ya. Aku bangga banget sama kamu! Semoga di usia 17 ini, semua mimpi dan harapanmu terkabul seperti panda yang mendapatkan bambu kesukaannya.
+          <i class="fas fa-heart text-red-500 ml-1 heartbeat"></i>
+        </p>
+        
+        <div class="flex flex-wrap justify-center gap-3 sm:gap-4 mt-6 sm:mt-8 px-2">
+          <div class="bg-gradient-to-br from-sky-100 to-sky-50 p-4 sm:p-5 rounded-xl sm:rounded-2xl shadow-lg w-36 sm:w-40 md:w-44 border-2 border-sky-300 interactive-card">
+            <i class="fas fa-smile-beam text-3xl sm:text-4xl text-sky-600 mb-1 sm:mb-2"></i>
+            <h3 class="font-bold text-sky-800 text-base sm:text-lg">Selalu Ceria</h3>
+            <p class="text-xs sm:text-sm mt-1 sm:mt-2">Seperti panda yang selalu menggemaskan dengan senyumannya</p>
+          </div>
+          
+          <div class="bg-gradient-to-br from-emerald-100 to-emerald-50 p-4 sm:p-5 rounded-xl sm:rounded-2xl shadow-lg w-36 sm:w-40 md:w-44 border-2 border-emerald-300 interactive-card">
+            <i class="fas fa-leaf text-3xl sm:text-4xl text-emerald-600 mb-1 sm:mb-2"></i>
+            <h3 class="font-bold text-emerald-800 text-base sm:text-lg">Penuh Kedamaian</h3>
+            <p class="text-xs sm:text-sm mt-1 sm:mt-2">Tenang dan penuh ketenangan bagai panda di hutan bambu</p>
+          </div>
+          
+          <div class="bg-gradient-to-br from-rose-100 to-rose-50 p-4 sm:p-5 rounded-xl sm:rounded-2xl shadow-lg w-36 sm:w-40 md:w-44 border-2 border-rose-300 interactive-card">
+            <i class="fas fa-heart text-3xl sm:text-4xl text-rose-600 mb-1 sm:mb-2"></i>
+            <h3 class="font-bold text-rose-800 text-base sm:text-lg">Penuh Kasih</h3>
+            <p class="text-xs sm:text-sm mt-1 sm:mt-2">Hangat dan penyayang seperti panda dengan keluarganya</p>
+          </div>
+          
+          <div class="bg-gradient-to-br from-amber-100 to-amber-50 p-4 sm:p-5 rounded-xl sm:rounded-2xl shadow-lg w-36 sm:w-40 md:w-44 border-2 border-amber-300 interactive-card">
+            <i class="fas fa-crown text-3xl sm:text-4xl text-amber-600 mb-1 sm:mb-2"></i>
+            <h3 class="font-bold text-amber-800 text-base sm:text-lg">Spesial & Unik</h3>
+            <p class="text-xs sm:text-sm mt-1 sm:mt-2">Langka dan istimewa seperti panda yang dilindungi</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Birthday Message -->
+      <div class="bg-gradient-to-r from-sky-600 via-purple-600 to-emerald-600 text-blackp-4 sm:p-6 md:p-8 rounded-2xl sm:rounded-3xl shadow-xl sm:shadow-2xl animate__animated animate__pulse animate__delay-2s animate__infinite mb-8 sm:mb-10 w-full max-w-3xl border-4 border-white interactive-card mx-2">
+        <h3 class="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4 dancing-font">
+          <i class="fas fa-gift mr-2 sm:mr-3"></i> Pesan Spesial untuk Panda Kesayangan
+        </h3>
+        <p class="text-base sm:text-lg md:text-xl comic-font px-2">
+          Semoga di usia 17 ini, semua mimpi dan harapanmu terkabul seperti panda yang mendapatkan bambu kesukaannya. Semoga kesehatan, kebahagiaan, dan kesuksesan selalu menyertaimu. 
+          Jadilah versi terbaik dari dirimu sendiri yang selalu menggemaskan! 🎋🥳
+          <br><br>
+          <span class="font-bold text-yellow-200 block mt-2 text-sm sm:text-base md:text-lg">"Seperti panda yang langka dan istimewa, kamu juga begitu spesial dan tak tergantikan!"</span>
+        </p>
+      </div>
+      
+      <!-- Photo Frame -->
+      <div class="photo-frame mb-8 sm:mb-10 p-2 bg-white rounded-lg max-w-md w-full sm:w-auto mx-2">
+        <div class="bg-gradient-to-br from-sky-100 to-emerald-100 p-4 sm:p-6 md:p-8 rounded-lg">
+          <div class="flex items-center justify-center mb-3 sm:mb-4">
+            <i class="fas fa-heart text-3xl sm:text-4xl text-rose-500 mr-3 sm:mr-4 heartbeat"></i>
+            <i class="fas fa-birthday-cake text-3xl sm:text-4xl text-amber-500 mr-3 sm:mr-4"></i>
+            <i class="fas fa-paw text-3xl sm:text-4xl text-sky-500"></i>
+          </div>
+          <p class="text-xl sm:text-2xl font-bold text-sky-900 dancing-font">Sweet 17</p>
+          <p class="text-base sm:text-lg mt-1 sm:mt-2 text-gray-700">Panda Manis 🐼</p>
+          <div class="mt-4 sm:mt-6 flex justify-center space-x-3 sm:space-x-4">
+            <div class="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-full bg-gradient-to-r from-sky-400 to-emerald-400 flex items-center justify-center text-blackfont-bold text-base sm:text-lg md:text-xl">17</div>
+            <div class="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-full bg-gradient-to-r from-rose-400 to-pink-400 flex items-center justify-center text-blacktext-xl sm:text-2xl">🎂</div>
+            <div class="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-full bg-gradient-to-r from-purple-400 to-indigo-400 flex items-center justify-center text-blacktext-xl sm:text-2xl">🐼</div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Animated Cake -->
+      <div class="cake mb-6 sm:mb-8" id="birthdayCake">
+        <div class="cake-layer layer-1"></div>
+        <div class="cake-layer layer-2"></div>
+        <div class="cake-layer layer-3"></div>
+        <div class="candle"></div>
+        <div class="flame"></div>
+      </div>
+      
+      <!-- Birthday Stats -->
+      <div class="glass-effect p-4 sm:p-6 md:p-8 rounded-2xl sm:rounded-3xl shadow-lg mb-8 sm:mb-10 panda-theme-bg w-full max-w-3xl mx-2">
+        <h3 class="text-2xl sm:text-3xl font-bold text-sky-900 mb-4 sm:mb-6 dancing-font text-center">Celebration Stats! 🎋</h3>
+        <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 md:gap-6">
+          <div class="text-center interactive-card">
+            <div class="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 flex items-center justify-center bg-gradient-to-br from-sky-500 to-sky-700 text-blacktext-2xl sm:text-3xl md:text-4xl font-bold rounded-xl sm:rounded-2xl shadow-lg sm:shadow-xl border-2 sm:border-4 border-white mx-auto">17</div>
+            <p class="mt-2 sm:mt-3 font-bold text-sky-800 text-sm sm:text-base md:text-lg">Tahun</p>
+            <p class="text-xs sm:text-sm text-gray-600">Usia yang penuh makna</p>
+          </div>
+          <div class="text-center interactive-card">
+            <div class="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 flex items-center justify-center bg-gradient-to-br from-emerald-500 to-emerald-700 text-blacktext-2xl sm:text-3xl md:text-4xl font-bold rounded-xl sm:rounded-2xl shadow-lg sm:shadow-xl border-2 sm:border-4 border-white mx-auto">6205</div>
+            <p class="mt-2 sm:mt-3 font-bold text-emerald-800 text-sm sm:text-base md:text-lg">Hari</p>
+            <p class="text-xs sm:text-sm text-gray-600">Sejak kamu lahir</p>
+          </div>
+          <div class="text-center interactive-card">
+            <div class="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 flex items-center justify-center bg-gradient-to-br from-rose-500 to-rose-700 text-blacktext-2xl sm:text-3xl md:text-4xl font-bold rounded-xl sm:rounded-2xl shadow-lg sm:shadow-xl border-2 sm:border-4 border-white mx-auto">∞</div>
+            <p class="mt-2 sm:mt-3 font-bold text-rose-800 text-sm sm:text-base md:text-lg">Kebahagiaan</p>
+            <p class="text-xs sm:text-sm text-gray-600">Yang akan datang</p>
+          </div>
+          <div class="text-center interactive-card">
+            <div class="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 flex items-center justify-center bg-gradient-to-br from-amber-500 to-amber-700 text-blacktext-2xl sm:text-3xl md:text-4xl font-bold rounded-xl sm:rounded-2xl shadow-lg sm:shadow-xl border-2 sm:border-4 border-white mx-auto">100%</div>
+            <p class="mt-2 sm:mt-3 font-bold text-amber-800 text-sm sm:text-base md:text-lg">Spesial</p>
+            <p class="text-xs sm:text-sm text-gray-600">Seperti panda</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Panda Facts -->
+      <div class="glass-effect p-4 sm:p-6 md:p-8 rounded-2xl sm:rounded-3xl shadow-lg mb-8 sm:mb-10 panda-theme-bg w-full max-w-3xl interactive-card mx-2">
+        <h3 class="text-2xl sm:text-3xl font-bold text-sky-900 mb-4 sm:mb-6 dancing-font text-center">Fakta Menarik tentang Panda 🐼</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4 md:gap-6">
+          <div class="bg-gradient-to-br from-sky-50 to-white p-3 sm:p-4 md:p-5 rounded-xl sm:rounded-2xl border-2 border-sky-200">
+            <div class="flex items-center mb-2 sm:mb-3">
+              <i class="fas fa-heart text-xl sm:text-2xl text-rose-500 mr-2 sm:mr-3"></i>
+              <h4 class="font-bold text-sky-800 text-base sm:text-lg">Simbol Kelembutan</h4>
+            </div>
+            <p class="text-gray-700 text-sm sm:text-base">Panda melambangkan kedamaian dan kelembutan hati, seperti kamu yang selalu membawa ketenangan bagi orang sekitar.</p>
+          </div>
+          <div class="bg-gradient-to-br from-emerald-50 to-white p-3 sm:p-4 md:p-5 rounded-xl sm:rounded-2xl border-2 border-emerald-200">
+            <div class="flex items-center mb-2 sm:mb-3">
+              <i class="fas fa-leaf text-xl sm:text-2xl text-emerald-500 mr-2 sm:mr-3"></i>
+              <h4 class="font-bold text-emerald-800 text-base sm:text-lg">Cinta Bambu</h4>
+            </div>
+            <p class="text-gray-700 text-sm sm:text-base">Panda menghabiskan 14 jam sehari untuk makan bambu, seperti dedikasimu pada hal-hal yang kamu cintai.</p>
+          </div>
+          <div class="bg-gradient-to-br from-amber-50 to-white p-3 sm:p-4 md:p-5 rounded-xl sm:rounded-2xl border-2 border-amber-200">
+            <div class="flex items-center mb-2 sm:mb-3">
+              <i class="fas fa-star text-xl sm:text-2xl text-amber-500 mr-2 sm:mr-3"></i>
+              <h4 class="font-bold text-amber-800 text-base sm:text-lg">Langka dan Spesial</h4>
+            </div>
+            <p class="text-gray-700 text-sm sm:text-base">Panda adalah spesies yang dilindungi karena kelangkaannya, sama seperti kamu yang satu-satunya dan tak tergantikan.</p>
+          </div>
+          <div class="bg-gradient-to-br from-rose-50 to-white p-3 sm:p-4 md:p-5 rounded-xl sm:rounded-2xl border-2 border-rose-200">
+            <div class="flex items-center mb-2 sm:mb-3">
+              <i class="fas fa-hand-holding-heart text-xl sm:text-2xl text-rose-500 mr-2 sm:mr-3"></i>
+              <h4 class="font-bold text-rose-800 text-base sm:text-lg">Menggemaskan</h4>
+            </div>
+            <p class="text-gray-700 text-sm sm:text-base">Panda selalu membawa senyum dengan tingkah lucunya, seperti kamu yang selalu membawa keceriaan.</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Celebration Progress -->
+      <div class="glass-effect p-4 sm:p-6 md:p-8 rounded-2xl sm:rounded-3xl shadow-lg mb-8 sm:mb-10 panda-theme-bg w-full max-w-3xl mx-2">
+        <h3 class="text-2xl sm:text-3xl font-bold text-sky-900 mb-4 sm:mb-6 dancing-font text-center">Progress Perayaan 🎊</h3>
+        <div class="space-y-3 sm:space-y-4 md:space-y-6">
+          <div>
+            <div class="flex justify-between mb-1">
+              <span class="font-bold text-sky-800 text-sm sm:text-base">Kebahagiaan</span>
+              <span class="font-bold text-emerald-600 text-sm sm:text-base">95%</span>
+            </div>
+            <div class="w-full bg-gray-200 rounded-full h-3 sm:h-4">
+              <div class="bg-gradient-to-r from-emerald-400 to-emerald-600 h-3 sm:h-4 rounded-full animate-pulse" style="width: 95%"></div>
+            </div>
+          </div>
+          <div>
+            <div class="flex justify-between mb-1">
+              <span class="font-bold text-sky-800 text-sm sm:text-base">Keceriaan</span>
+              <span class="font-bold text-amber-600 text-sm sm:text-base">100%</span>
+            </div>
+            <div class="w-full bg-gray-200 rounded-full h-3 sm:h-4">
+              <div class="bg-gradient-to-r from-amber-400 to-amber-600 h-3 sm:h-4 rounded-full animate-pulse" style="width: 100%"></div>
+            </div>
+          </div>
+          <div>
+            <div class="flex justify-between mb-1">
+              <span class="font-bold text-sky-800 text-sm sm:text-base">Kenangan Indah</span>
+              <span class="font-bold text-rose-600 text-sm sm:text-base">87%</span>
+            </div>
+            <div class="w-full bg-gray-200 rounded-full h-3 sm:h-4">
+              <div class="bg-gradient-to-r from-rose-400 to-rose-600 h-3 sm:h-4 rounded-full animate-pulse" style="width: 87%"></div>
+            </div>
+          </div>
+          <div>
+            <div class="flex justify-between mb-1">
+              <span class="font-bold text-sky-800 text-sm sm:text-base">Keluapan Cinta</span>
+              <span class="font-bold text-purple-600 text-sm sm:text-base">99%</span>
+            </div>
+            <div class="w-full bg-gray-200 rounded-full h-3 sm:h-4">
+              <div class="bg-gradient-to-r from-purple-400 to-purple-600 h-3 sm:h-4 rounded-full animate-pulse" style="width: 99%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="scroll-down" onclick="scrollToContent()"></div>
+    </div>
+  </section>
+
+  <!-- Floating Elements hanya untuk desktop -->
+  <div class="floating-element" style="--i:1; top:15%; left:5%;">
+    <i class="fas fa-heart text-3xl sm:text-4xl text-sky-400"></i>
+  </div>
+  <div class="floating-element" style="--i:2; top:20%; right:8%;">
+    <i class="fas fa-star text-3xl sm:text-4xl text-amber-400"></i>
+  </div>
+  <div class="floating-element" style="--i:3; top:70%; left:10%;">
+    <i class="fas fa-birthday-cake text-3xl sm:text-4xl text-emerald-400"></i>
+  </div>
+  <div class="floating-element" style="--i:4; top:60%; right:12%;">
+    <i class="fas fa-gift text-3xl sm:text-4xl text-rose-400"></i>
+  </div>
+  <div class="floating-element" style="--i:5; top:40%; left:15%;">
+    <i class="fas fa-leaf text-3xl sm:text-4xl text-green-400"></i>
+  </div>
+
+  <!-- Audio Player -->
+  <div class="fixed bottom-3 sm:bottom-4 right-3 sm:right-4 glass-effect p-2 sm:p-3 rounded-full shadow-lg sm:shadow-xl z-40 panda-theme-bg">
+    <button id="musicToggle" class="bg-gradient-to-r from-sky-600 to-emerald-600 text-blackp-2 sm:p-3 md:p-4 rounded-full hover:opacity-90 transition-all duration-300 shadow-lg">
+      <i class="fas fa-music text-lg sm:text-xl md:text-2xl"></i>
+    </button>
+    <audio id="birthdayMusic" loop>
+      <source src="https://assets.mixkit.co/music/preview/mixkit-happy-birthday-to-you-443.mp3" type="audio/mpeg">
+    </audio>
+  </div>
+
+  <!-- Footer -->
+  <footer class="glass-effect p-4 sm:p-6 md:p-8 mx-3 sm:mx-4 mb-4 sm:mb-6 rounded-2xl sm:rounded-3xl text-center panda-theme-bg shadow-lg sm:shadow-xl">
+    <div class="container mx-auto">
+      <p class="text-sky-900 dancing-font text-xl sm:text-2xl md:text-3xl mb-3 sm:mb-4">Sweet Seventeen Panda Manis 🐼</p>
+      <p class="text-gray-700 text-sm sm:text-base md:text-lg mb-3 sm:mb-4">Dibuat dengan <i class="fas fa-heart text-rose-500 heartbeat"></i> untuk ulang tahun ke-17 yang spesial</p>
+      <div class="flex justify-center space-x-3 sm:space-x-4 md:space-x-6 mt-4 sm:mt-6">
+        <a href="#" class="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-full bg-gradient-to-r from-pink-500 to-rose-500 flex items-center justify-center text-blacktext-base sm:text-lg md:text-xl shadow-md sm:shadow-lg hover:scale-110 transition-all duration-300">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="#" class="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-full bg-gradient-to-r from-green-500 to-emerald-500 flex items-center justify-center text-blacktext-base sm:text-lg md:text-xl shadow-md sm:shadow-lg hover:scale-110 transition-all duration-300">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="#" class="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-full bg-gradient-to-r from-gray-800 to-gray-900 flex items-center justify-center text-blacktext-base sm:text-lg md:text-xl shadow-md sm:shadow-lg hover:scale-110 transition-all duration-300">
+          <i class="fab fa-tiktok"></i>
+        </a>
+        <a href="#" class="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-full bg-gradient-to-r from-blue-400 to-sky-500 flex items-center justify-center text-blacktext-base sm:text-lg md:text-xl shadow-md sm:shadow-lg hover:scale-110 transition-all duration-300">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </div>
+      <p class="mt-4 sm:mt-6 text-gray-600 text-xs sm:text-sm">© 2023 Sweet Seventeen Celebration. Semua hak cipta dilindungi.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Create falling bamboo leaves and sparkles
+    for (let i = 0; i < 30; i++) {
+      // Create bamboo leaves
+      let leaf = document.createElement("div");
+      leaf.innerHTML = "🎋";
+      leaf.className = "absolute opacity-40 z-0";
+      leaf.style.left = Math.random() * window.innerWidth + "px";
+      leaf.style.fontSize = (12 + Math.random() * 15) + "px";
+      leaf.style.animation = `fall ${8 + Math.random() * 7}s linear infinite`;
+      leaf.style.top = -Math.random() * window.innerHeight + "px";
+      leaf.style.animationDelay = Math.random() * 5 + "s";
+      leaf.style.zIndex = "0";
+      document.getElementById("hearts").appendChild(leaf);
+      
+      // Create sparkles
+      if (i < 20) {
+        let sparkle = document.createElement("div");
+        sparkle.className = "sparkle";
+        sparkle.style.left = Math.random() * window.innerWidth + "px";
+        sparkle.style.top = Math.random() * window.innerHeight + "px";
+        sparkle.style.animation = `fall ${10 + Math.random() * 10}s linear infinite, sparkle 2s infinite`;
+        sparkle.style.animationDelay = Math.random() * 3 + "s";
+        sparkle.style.background = "#a5f3fc";
+        sparkle.style.zIndex = "0";
+        document.getElementById("sparkles").appendChild(sparkle);
+      }
+    }
+    
+    // Music toggle functionality
+    const musicToggle = document.getElementById('musicToggle');
+    const birthdayMusic = document.getElementById('birthdayMusic');
+    let isPlaying = false;
+    
+    // Try to autoplay with user interaction
+    document.addEventListener('click', function() {
+      if (!isPlaying) {
+        birthdayMusic.volume = 0.3;
+        birthdayMusic.play().then(() => {
+          isPlaying = true;
+          musicToggle.innerHTML = '<i class="fas fa-volume-up text-xl"></i>';
+          musicToggle.classList.add('bg-gradient-to-r', 'from-emerald-600', 'to-green-600');
+          musicToggle.classList.remove('bg-gradient-to-r', 'from-sky-600', 'to-emerald-600');
+        }).catch(e => {
+          console.log("Autoplay prevented:", e);
+        });
+      }
+    }, { once: true });
+    
+    musicToggle.addEventListener('click', function() {
+      if (isPlaying) {
+        birthdayMusic.pause();
+        musicToggle.innerHTML = '<i class="fas fa-volume-mute text-xl"></i>';
+        musicToggle.classList.remove('bg-gradient-to-r', 'from-emerald-600', 'to-green-600');
+        musicToggle.classList.add('bg-gradient-to-r', 'from-sky-600', 'to-emerald-600');
+      } else {
+        birthdayMusic.play();
+        musicToggle.innerHTML = '<i class="fas fa-volume-up text-xl"></i>';
+        musicToggle.classList.add('bg-gradient-to-r', 'from-emerald-600', 'to-green-600');
+        musicToggle.classList.remove('bg-gradient-to-r', 'from-sky-600', 'to-emerald-600');
+      }
+      isPlaying = !isPlaying;
+    });
+    
+    // Scroll function
+    function scrollToContent() {
+      window.scrollTo({
+        top: window.innerHeight,
+        behavior: 'smooth'
+      });
+    }
+    
+    // Add floating bamboo leaves and pandas on click
+    document.body.addEventListener('click', function(e) {
+      if (e.target.closest('nav') || e.target.closest('#musicToggle') || e.target.closest('.celebration-modal')) return;
+      
+      const emojis = ['🎋', '🐼', '🎉', '🎁', '✨', '🥳', '❤️', '🌟', '🎍', '🍰', '🎈'];
+      
+      const element = document.createElement('div');
+      element.innerHTML = emojis[Math.floor(Math.random() * emojis.length)];
+      element.style.position = 'fixed';
+      element.style.left = e.clientX + 'px';
+      element.style.top = e.clientY + 'px';
+      element.style.fontSize = (12 + Math.random() * 20) + 'px';
+      element.style.zIndex = '9999';
+      element.style.pointerEvents = 'none';
+      element.style.animation = `fall ${2 + Math.random() * 3}s linear forwards`;
+      
+      document.body.appendChild(element);
+      
+      setTimeout(() => {
+        element.remove();
+      }, 4000);
+    });
+    
+    // Add confetti effect on load
+    window.addEventListener('load', function() {
+      setTimeout(() => {
+        // Show celebration modal
+        document.getElementById('celebrationModal').classList.add('active');
+        
+        // Create confetti
+        createConfetti();
+      }, 1000);
+    });
+    
+    // Panda interactive message
+    const panda = document.getElementById('panda');
+    const pandaMessage = document.getElementById('pandaMessage');
+    const messages = [
+      "Sweet Seventeen! 🎋",
+      "You're Amazing! 🌟",
+      "Happy Birthday! 🎂",
+      "Panda Power! 🐼",
+      "Make a Wish! ✨",
+      "So Special! 💖"
+    ];
+    
+    panda.addEventListener('click', function() {
+      const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+      pandaMessage.textContent = randomMessage;
+      pandaMessage.style.display = 'block';
+      
+      // Add animation
+      pandaMessage.style.animation = 'none';
+      setTimeout(() => {
+        pandaMessage.style.animation = 'heartbeat 1.5s infinite';
+      }, 10);
+      
+      // Hide message after 3 seconds
+      setTimeout(() => {
+        pandaMessage.style.display = 'none';
+      }, 3000);
+      
+      createConfetti();
+    });
+    
+    // Cake interactive
+    const cake = document.getElementById('birthdayCake');
+    cake.addEventListener('click', function() {
+      const flame = document.querySelector('.flame');
+      flame.style.animation = 'none';
+      setTimeout(() => {
+        flame.style.animation = 'flame-flicker 0.3s infinite alternate';
+      }, 10);
+      
+      createConfetti();
+    });
+    
+    // Create confetti function
+    function createConfetti() {
+      const confettiCount = window.innerWidth < 768 ? 50 : 100;
+      
+      for (let i = 0; i < confettiCount; i++) {
+        const confetti = document.createElement('div');
+        confetti.className = 'confetti';
+        confetti.innerHTML = ['🎉', '✨', '🎊', '🌟', '🐼', '🎋', '🎈', '🥳'][Math.floor(Math.random() * 8)];
+        confetti.style.left = Math.random() * window.innerWidth + 'px';
+        confetti.style.top = '-50px';
+        confetti.style.fontSize = (8 + Math.random() * 15) + 'px';
+        confetti.style.color = ['#0ea5e9', '#10b981', '#f59e0b', '#8b5cf6', '#ec4899'][Math.floor(Math.random() * 5)];
+        confetti.style.animation = `fall ${1.5 + Math.random() * 2.5}s linear forwards`;
+        confetti.style.opacity = '0.9';
+        
+        document.getElementById('confetti-container').appendChild(confetti);
+        
+        setTimeout(() => {
+          confetti.remove();
+        }, 4000);
+      }
+    }
+    
+    // Close modal function
+    function closeModal() {
+      document.getElementById('celebrationModal').classList.remove('active');
+      createConfetti();
+    }
+    
+    // Balloon pop effect
+    const balloons = document.querySelectorAll('.balloon');
+    balloons.forEach(balloon => {
+      balloon.addEventListener('click', function() {
+        this.style.animation = 'none';
+        this.style.transform = 'scale(1.5)';
+        this.style.opacity = '0';
+        this.style.transition = 'all 0.5s ease';
+        
+        createConfetti();
+        
+        setTimeout(() => {
+          this.remove();
+        }, 500);
+      });
+    });
+    
+    // Interactive progress bars
+    const progressBars = document.querySelectorAll('.w-full.bg-gray-200.rounded-full > div');
+    progressBars.forEach(bar => {
+      const width = bar.style.width;
+      bar.style.width = '0%';
+      
+      setTimeout(() => {
+        bar.style.transition = 'width 2s ease-in-out';
+        bar.style.width = width;
+      }, 500);
+    });
+  </script>
+</body>
+</html>

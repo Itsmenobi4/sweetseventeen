@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quotes Sweet Seventeen Panda Manis 🎋</title>
+  <style>
+    @keyframes popIn {
+      from {
+        transform: scale(0.95);
+        opacity: 0;
+      }
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+    
+    @keyframes fadeInUp {
+      from {
+        transform: translateY(20px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+    
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+    
+    @keyframes heartbeat {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.05);
+      }
+    }
+    
+    .page-enter {
+      animation: popIn 0.6s ease-out;
+    }
+    
+    .float-animation {
+      animation: float 3s ease-in-out infinite;
+    }
+    
+    .heartbeat {
+      animation: heartbeat 1.5s ease-in-out infinite;
+    }
+    
+    .dancing-font {
+      font-family: 'Dancing Script', cursive;
+    }
+    
+    .poppins-font {
+      font-family: 'Poppins', sans-serif;
+    }
+    
+    .gradient-bg {
+      background: linear-gradient(135deg, #e0f2fe 0%, #f0f9ff 25%, #e0f2fe 50%, #f0f9ff 75%, #e0f2fe 100%);
+      background-size: 400% 400%;
+      animation: gradient 15s ease infinite;
+    }
+    
+    @keyframes gradient {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    
+    .glass-effect {
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      box-shadow: 0 8px 32px rgba(31, 38, 135, 0.1);
+    }
+    
+    .panda-theme-bg {
+      background: rgba(255, 255, 255, 0.95);
+      border: 2px solid #333;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+    
+    .quote-card {
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+    
+    .quote-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    }
+    
+    .bamboo-border {
+      border-left: 5px solid #22c55e;
+      padding-left: 20px;
+      position: relative;
+    }
+    
+    .bamboo-border::before {
+      content: '';
+      position: absolute;
+      left: -2px;
+      top: 0;
+      height: 100%;
+      width: 8px;
+      background: #16a34a;
+      border-radius: 4px;
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .bamboo-border {
+        border-left-width: 4px;
+        padding-left: 15px;
+      }
+    }
+  </style>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="gradient-bg text-gray-700 poppins-font">
+  <!-- Navigation -->
+  <nav class="glass-effect p-3 md:p-4 shadow-lg mx-3 md:mx-4 mt-3 md:mt-4 rounded-xl sticky top-2 md:top-4 z-50 panda-theme-bg">
+    <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+      <h1 class="text-xl md:text-2xl font-bold text-sky-900 dancing-font flex items-center mb-3 md:mb-0 text-center md:text-left">
+        <i class="fas fa-heart mr-2 md:mr-3 text-pink-500 heartbeat"></i>
+        <span class="whitespace-nowrap">Sweet Seventeen <span class="hidden sm:inline">Quotes</span> 💌</span>
+      </h1>
+      <div class="flex flex-wrap justify-center gap-2 sm:gap-3 md:gap-4 w-full md:w-auto">
+        <a href="index.html" class="px-3 sm:px-4 py-2 bg-gradient-to-r from-white to-sky-100 text-sky-700 rounded-full hover:opacity-90 transition-all duration-300 flex items-center shadow-md border border-sky-300 justify-center text-sm sm:text-base">
+          <i class="fas fa-home mr-1 sm:mr-2"></i> <span class="truncate">Home</span>
+        </a>
+        <a href="gallery.html" class="px-3 sm:px-4 py-2 bg-gradient-to-r from-white to-emerald-100 text-emerald-700 rounded-full hover:opacity-90 transition-all duration-300 flex items-center shadow-md border border-emerald-300 justify-center text-sm sm:text-base">
+          <i class="fas fa-images mr-1 sm:mr-2"></i> <span class="truncate">Gallery</span>
+        </a>
+        <a href="quotes.html" class="px-3 sm:px-4 py-2 bg-gradient-to-r from-sky-600 to-emerald-600 text-black rounded-full hover:opacity-90 transition-all duration-300 flex items-center shadow-md justify-center text-sm sm:text-base">
+          <i class="fas fa-quote-right mr-1 sm:mr-2"></i> <span class="truncate">Quotes</span>
+        </a>
+        <a href="contact.html" class="px-3 sm:px-4 py-2 bg-gradient-to-r from-white to-rose-100 text-rose-700 rounded-full hover:opacity-90 transition-all duration-300 flex items-center shadow-md border border-rose-300 justify-center text-sm sm:text-base">
+          <i class="fas fa-envelope mr-1 sm:mr-2"></i> <span class="truncate">Contact</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <section class="p-4 sm:p-6 md:p-8 min-h-screen">
+    <div class="max-w-6xl mx-auto">
+      <!-- Header -->
+      <div class="text-center mb-8 sm:mb-12 animate__animated animate__fadeInDown">
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-sky-900 dancing-font mb-3 sm:mb-4">
+          Kata-Kata Untuk Panda Kesayangan 🎋
+        </h2>
+        <p class="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto">
+          Pesan-pesan spesial dari hati untuk kamu di hari sweet seventeen
+        </p>
+        <div class="mt-4 flex justify-center">
+          <i class="fas fa-heart text-pink-500 text-2xl mr-3 heartbeat"></i>
+          <i class="fas fa-star text-amber-500 text-2xl mr-3 float-animation"></i>
+          <i class="fas fa-leaf text-emerald-500 text-2xl float-animation" style="animation-delay: 0.5s"></i>
+        </div>
+      </div>
+
+      <!-- Short Quotes Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-10 sm:mb-12">
+        <div class="glass-effect p-5 sm:p-6 rounded-2xl quote-card animate__animated animate__fadeInUp">
+          <div class="flex items-start mb-3">
+            <i class="fas fa-heart text-pink-500 text-xl mr-3 mt-1"></i>
+            <div>
+              <h3 class="font-bold text-sky-800 text-lg mb-2">Keindahan Hati</h3>
+              <p class="text-gray-700 italic">"Kamu itu bukan cuma indah dari luar, tapi dalemnya juga bikin adem."</p>
+            </div>
+          </div>
+          <div class="mt-3 pt-3 border-t border-gray-100">
+            <p class="text-sm text-gray-500">- Dari yang selalu mengagumimu</p>
+          </div>
+        </div>
+
+        <div class="glass-effect p-5 sm:p-6 rounded-2xl quote-card animate__animated animate__fadeInUp animate__delay-1s">
+          <div class="flex items-start mb-3">
+            <i class="fas fa-star text-amber-500 text-xl mr-3 mt-1"></i>
+            <div>
+              <h3 class="font-bold text-sky-800 text-lg mb-2">Rasa Syukur</h3>
+              <p class="text-gray-700 italic">"Aku bersyukur bisa kenal kamu, dan bisa ada di momen spesial kamu hari ini."</p>
+            </div>
+          </div>
+          <div class="mt-3 pt-3 border-t border-gray-100">
+            <p class="text-sm text-gray-500">- Dari yang beruntung mengenalmu</p>
+          </div>
+        </div>
+
+        <div class="glass-effect p-5 sm:p-6 rounded-2xl quote-card animate__animated animate__fadeInUp animate__delay-2s">
+          <div class="flex items-start mb-3">
+            <i class="fas fa-gift text-emerald-500 text-xl mr-3 mt-1"></i>
+            <div>
+              <h3 class="font-bold text-sky-800 text-lg mb-2">Harapan Indah</h3>
+              <p class="text-gray-700 italic">"Semoga semua hal indah yang kamu harapin, pelan-pelan datang ke kamu ya."</p>
+            </div>
+          </div>
+          <div class="mt-3 pt-3 border-t border-gray-100">
+            <p class="text-sm text-gray-500">- Dari yang mendoakan yang terbaik</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Long Love Letter -->
+      <div class="glass-effect p-5 sm:p-6 md:p-8 rounded-3xl mb-8 panda-theme-bg animate__animated animate__fadeInUp animate__delay-1s">
+        <div class="text-center mb-6 sm:mb-8">
+          <h3 class="text-2xl sm:text-3xl font-bold text-sky-900 dancing-font mb-2">
+            <i class="fas fa-envelope text-pink-500 mr-2"></i>
+            Surat Cinta untuk Sweet Seventeen
+          </h3>
+          <p class="text-gray-600">Sebuah pesan panjang dari hati untuk panda spesialku 🐼</p>
+        </div>
+
+        <div class="space-y-5 sm:space-y-6">
+          <div class="bamboo-border">
+            <p class="text-gray-700 leading-relaxed text-lg">
+              Waktu nunjukin tengah malam. Langit lagi gelap tapi indah, bintang-bintang nyala kayak tahu ada yang spesial malam ini. Dan iya, yang spesial itu kamu. Di detik pertama tanggal baru, orang yang paling aku sayang di dunia ini nambah umur. Sweet seventeen. Katanya angka ini spesial, tapi buat aku… yang spesial bukan angkanya, tapi kamu.
+            </p>
+          </div>
+
+          <div class="bamboo-border">
+            <p class="text-gray-700 leading-relaxed text-lg">
+              Dedeeee, 17 tahun bukan angka kecil. Ini adalah momen transisi, antara masa remaja yang penuh petualangan sama gerbang menuju kedewasaan yang penuh tantangan. Tapi kamu nggak sendiri. Kamu punya aku. Dan aku bukan cuma pengen nemenin kamu di ulang tahun ini, tapi di semua tahun yang akan datang juga. Kalau kamu mau.
+            </p>
+          </div>
+
+          <div class="bamboo-border">
+            <p class="text-gray-700 leading-relaxed text-lg">
+              Dari semua hal yang pernah aku rasain, kamu salah satu yang paling bikin jantung aku tenang, tapi deg-degan di saat yang sama. Kamu itu kombinasi antara rumah, taman bunga, dan langit malam. Kadang kamu bikin aku nyaman, kadang kamu bikin aku kagum, kadang kamu bikin aku diem dan mikir, "Gimana bisa sih seseorang seindah ini nyata?"
+            </p>
+          </div>
+
+          <div class="bamboo-border">
+            <p class="text-gray-700 leading-relaxed text-lg">
+              Aku udah lihat banyak sisi dari kamu—yang manja, yang dewasa, yang ngambek, yang semangat, yang takut, yang berani… dan semua sisi itu bikin aku makin yakin, kalau aku sayang sama kamu itu bukan karena satu alasan spesifik. Tapi karena kamu... ya kamu.
+            </p>
+          </div>
+
+          <div class="bamboo-border">
+            <p class="text-gray-700 leading-relaxed text-lg">
+              Aku tahu hidup ke depan gak selalu mudah. Makin dewasa, makin banyak hal yang bikin kita ragu, takut, bahkan kecewa. Tapi aku pengen jadi tempat kamu balik saat semuanya berasa berat. Aku pengen jadi tangan yang kamu genggam waktu kamu ngerasa dunia gak ngerti kamu. Aku pengen jadi pundak yang bisa kamu sandarin, bahkan waktu kamu gak bilang apa-apa.
+            </p>
+          </div>
+
+          <div class="bamboo-border">
+            <p class="text-gray-700 leading-relaxed text-lg">
+              Kalau suatu hari nanti kamu capek… gak apa-apa. Aku ada. Gak buat ngejudge, gak buat nyuruh kamu cepet-cepet bangkit, tapi buat nemenin kamu duduk, diem, ngerasain semuanya bareng. Kita pelan-pelan, gak perlu buru-buru. Karena aku yakin, selama kamu masih mau berjuang, kamu bakal sampai ke tempat yang kamu mimpikan.
+            </p>
+          </div>
+
+          <div class="bamboo-border">
+            <p class="text-gray-700 leading-relaxed text-lg">
+              Di ulang tahun kamu ini, aku gak cuma mau ngucapin "selamat ulang tahun", tapi aku juga mau ngucapin: Selamat bertumbuh. Selamat menjadi lebih kuat. Selamat menjadi lebih kamu.
+            </p>
+          </div>
+
+          <div class="bamboo-border">
+            <p class="text-gray-700 leading-relaxed text-lg">
+              Aku tahu aku gak sempurna. Tapi aku janji akan selalu jujur. Tentang rasa, tentang perhatian, tentang kesetiaan. Aku janji gak akan pernah anggap kamu cuma 'biasa'. Karena kamu enggak. Kamu itu spesial, banget. Dan aku gak pernah main-main soal kamu.
+            </p>
+          </div>
+
+          <div class="bamboo-border">
+            <p class="text-gray-700 leading-relaxed text-lg">
+              Semoga 17 tahun ini jadi awal dari banyak hal indah yang akan datang. Semoga dunia makin ramah sama kamu. Dan semoga aku bisa selalu ada… di setiap langkah kamu.
+            </p>
+          </div>
+
+          <div class="mt-8 sm:mt-10 pt-6 border-t border-gray-200">
+            <div class="flex items-center justify-end">
+              <div class="text-right">
+                <p class="font-semibold text-pink-600 text-lg sm:text-xl dancing-font">— Nobitaaaa 🤍</p>
+                <p class="text-gray-500 text-sm mt-1">Untuk Panda Kesayanganku</p>
+              </div>
+              <i class="fas fa-heart text-pink-500 text-2xl ml-3 heartbeat"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Panda Facts Quotes -->
+      <div class="glass-effect p-5 sm:p-6 md:p-8 rounded-3xl mb-8 panda-theme-bg animate__animated animate__fadeInUp animate__delay-2s">
+        <h3 class="text-2xl sm:text-3xl font-bold text-sky-900 dancing-font mb-6 text-center">
+          <i class="fas fa-paw mr-2"></i>
+          Quotes Panda Style 🐼
+        </h3>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="bg-gradient-to-br from-sky-50 to-white p-5 rounded-2xl border-2 border-sky-200">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 rounded-full bg-sky-100 flex items-center justify-center mr-4">
+                <i class="fas fa-leaf text-sky-600 text-xl"></i>
+              </div>
+              <h4 class="font-bold text-sky-800 text-lg">Seperti Bambu</h4>
+            </div>
+            <p class="text-gray-700 italic">"Kamu itu seperti bambu, kuat tapi fleksibel, mampu bertahan dalam segala cuaca, dan selalu tumbuh lebih tinggi."</p>
+          </div>
+
+          <div class="bg-gradient-to-br from-emerald-50 to-white p-5 rounded-2xl border-2 border-emerald-200">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 rounded-full bg-emerald-100 flex items-center justify-center mr-4">
+                <i class="fas fa-heart text-emerald-600 text-xl"></i>
+              </div>
+              <h4 class="font-bold text-emerald-800 text-lg">Panda yang Menggemaskan</h4>
+            </div>
+            <p class="text-gray-700 italic">"Seperti panda yang selalu menggemaskan, kamu bawa kebahagiaan kemanapun kamu pergi."</p>
+          </div>
+
+          <div class="bg-gradient-to-br from-amber-50 to-white p-5 rounded-2xl border-2 border-amber-200">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 rounded-full bg-amber-100 flex items-center justify-center mr-4">
+                <i class="fas fa-star text-amber-600 text-xl"></i>
+              </div>
+              <h4 class="font-bold text-amber-800 text-lg">Langka dan Spesial</h4>
+            </div>
+            <p class="text-gray-700 italic">"Kamu seperti panda, langka dan spesial. Tidak ada yang bisa menggantikan keunikanmu."</p>
+          </div>
+
+          <div class="bg-gradient-to-br from-rose-50 to-white p-5 rounded-2xl border-2 border-rose-200">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 rounded-full bg-rose-100 flex items-center justify-center mr-4">
+                <i class="fas fa-smile text-rose-600 text-xl"></i>
+              </div>
+              <h4 class="font-bold text-rose-800 text-lg">Senyuman Panda</h4>
+            </div>
+            <p class="text-gray-700 italic">"Senyumanmu itu seperti panda, sederhana tapi bisa membuat hari siapapun menjadi lebih cerah."</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Back to Home Button -->
+      <div class="text-center mt-10">
+        <a href="index.html" class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-sky-600 to-emerald-600 text-black font-bold rounded-full hover:opacity-90 transition-all duration-300 shadow-lg">
+          <i class="fas fa-home mr-2"></i>
+          Kembali ke Home
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="glass-effect p-6 mx-3 sm:mx-4 mb-4 rounded-xl text-center panda-theme-bg">
+    <div class="container mx-auto">
+      <p class="text-sky-900 dancing-font text-xl sm:text-2xl mb-3">Sweet Seventeen Panda Manis 🐼</p>
+      <p class="text-gray-700 text-sm sm:text-base">Halaman quotes dibuat dengan <i class="fas fa-heart text-rose-500 heartbeat"></i> untuk panda spesial</p>
+      <div class="flex justify-center space-x-4 mt-4">
+        <i class="fab fa-instagram text-xl text-pink-500"></i>
+        <i class="fab fa-whatsapp text-xl text-green-500"></i>
+        <i class="fab fa-tiktok text-xl text-gray-800"></i>
+        <i class="fab fa-twitter text-xl text-blue-400"></i>
+      </div>
+      <p class="mt-4 text-gray-600 text-xs">© 2023 Sweet Seventeen Celebration</p>
+    </div>
+  </footer>
+
+  <script>
+    // Add animation to quote cards on scroll
+    document.addEventListener('DOMContentLoaded', function() {
+      const quoteCards = document.querySelectorAll('.quote-card');
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate__animated', 'animate__fadeInUp');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+      
+      quoteCards.forEach(card => observer.observe(card));
+      
+      // Add click effect to quote cards
+      quoteCards.forEach(card => {
+        card.addEventListener('click', function() {
+          this.style.transform = 'scale(0.98)';
+          setTimeout(() => {
+            this.style.transform = 'translateY(-5px)';
+          }, 150);
+        });
+      });
+    });
+  </script>
+</body>
+</html>
